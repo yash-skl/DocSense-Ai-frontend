@@ -54,12 +54,12 @@ const PdfUpload = () => {
       formData.append('file', pdfFile);
       formData.append('rules', JSON.stringify(validRules));
 
-      console.log('Submitting form to:', 'http://localhost:8000/api/v1/pdf/check');
+      console.log('Submitting form to:', 'https://docsense-ai-backend.onrender.com/api/v1/pdf/check');
       console.log('Rules being sent:', validRules);
       console.log('PDF file:', pdfFile.name);
 
       const response = await axios.post(
-        'http://localhost:8000/api/v1/pdf/check',
+        'https://docsense-ai-backend.onrender.com/api/v1/pdf/check',
         formData,
         {
           headers: {
